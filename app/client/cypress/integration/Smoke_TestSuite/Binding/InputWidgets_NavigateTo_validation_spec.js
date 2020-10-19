@@ -48,6 +48,7 @@ describe("Binding the multiple Widgets and validating NavigateTo Page", function
       cy.get(publish.inputGrp)
         .first()
         .clear();
+      cy.wait(500);
       cy.get(widgetsPage.chartWidget).should("be.visible");
     });
   });
