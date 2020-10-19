@@ -24,6 +24,7 @@ describe("Binding the multiple Widgets and validating NavigateTo Page", function
       .click();
     cy.enterActionValue(pageid);
     cy.get(commonlocators.editPropCrossButton).click();
+    cy.wait(300);
   });
 
   it("Create MyPage and valdiate if its successfully created", function() {
@@ -47,8 +48,8 @@ describe("Binding the multiple Widgets and validating NavigateTo Page", function
 
       cy.get(publish.inputGrp)
         .first()
-        .clear();
-      cy.wait(500);
+        .type("123");
+
       cy.get(widgetsPage.chartWidget).should("be.visible");
     });
   });
